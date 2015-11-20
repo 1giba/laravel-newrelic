@@ -22,8 +22,8 @@ class CustomerTableSeeder extends Seeder
     		$customer = [];
     		$customer['name'] 		= $faker->name;
     		$customer['cnpj_cpf'] 	= $faker->cpf;
-    		$customer['birth_date']= $faker->dateTimeThisCentury->format('Y-m-d');
-    		$customer['email'] 	= $faker->email;
+    		$customer['birth_date'] = $faker->dateTimeThisCentury->format('Y-m-d');
+    		$customer['email'] 		= $faker->email;
     		$customer['address'] 	= json_encode([
     			'street_address' => $faker->streetAddress,
     			'city'			 => $faker->city,

@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Api routes
+|--------------------------------------------------------------------------
+*/
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', function ($api) {	
+	$api->get('customers', 'App\Http\Controllers\CustomerController@index');
+});

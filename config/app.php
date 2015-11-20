@@ -150,6 +150,7 @@ return [
          * Vendor Service Providers...
          */
         Intouch\LaravelNewrelic\NewrelicServiceProvider::class,
+        Dingo\Api\Provider\LaravelServiceProvider::class,
 
     ],
 

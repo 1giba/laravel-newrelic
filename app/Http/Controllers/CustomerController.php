@@ -6,9 +6,18 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\CustomerRepository;
 
 class CustomerController extends Controller
 {
+
+    protected $customers;
+
+    public function __construct(CustomerRepository $customers)
+    {
+        $this->customers = $customers;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +25,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        return $this->customers->paginate(100);
     }
 
     /**
