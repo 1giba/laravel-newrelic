@@ -16,7 +16,6 @@ class DatabaseServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Newrelic::setAppName('TestApp');
         Customer::observe(new NewrelicTimingObserver());
         Customer::observe(new NewrelicCountingObserver());
     }
